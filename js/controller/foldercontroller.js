@@ -199,6 +199,9 @@ define(function(require) {
 			folder.set('total', Math.max(0, folder.get('total')));
 		});
 
+		// Update the title to reflect the new total count
+		Radio.ui.trigger('title:update');
+
 		var searchCollection = currentFolder.messages;
 		var index = searchCollection.indexOf(message);
 		// Select previous or first
